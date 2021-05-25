@@ -54,13 +54,13 @@ namespace TransactionApp
             }
             transaction.Id = id;
             Console.WriteLine("Введите дату");
-            while (DateTime.TryParse(Console.ReadLine(), out date))
+            while (!DateTime.TryParse(Console.ReadLine(), out date))
             {
                 Console.WriteLine("Введите дату корректно");
             }
             transaction.TransactionDate = date;
             Console.WriteLine("Введите сумму");
-            while (Decimal.TryParse(Console.ReadLine(), out sum))
+            while (!Decimal.TryParse(Console.ReadLine(), out sum))
             {
                 Console.WriteLine("Введите сумму корректно");
             }
